@@ -68,19 +68,34 @@ docker run --name teste-pgadmin --network=postgres-network -p 15432:80 -e "PGADM
 ### Script dá tabela.
 - Obs.: O script é criado automáticamente pela aplicação, sendo que não necessário executar em base de dados. 
 
--CREATE TABLE IF NOT EXISTS public."Mercado"
--(
--    cpf_cnpj_comprador character varying(14) COLLATE pg_catalog."default" NOT NULL,
--    flg_private boolean,
--    flg_incompleto boolean,
--    dt_ultima_compra date,
--    vl_ticket_medio numeric(10,2),
--    vl_ticket_ult_compra numeric(10,2),
--    cnpj_loja_freq character varying(14) COLLATE pg_catalog."default" NOT NULL,
--    cnpj_loja_ultima character varying(14) COLLATE pg_catalog."default" NOT NULL,
--    CONSTRAINT "Mercado_pkey" PRIMARY KEY (cpf_cnpj_comprador)
--)
+```
+
+CREATE TABLE IF NOT EXISTS public."Mercado"
+(
+    cpf_cnpj_comprador character varying(14) COLLATE pg_catalog."default" NOT NULL,
+    flg_private boolean,
+    flg_incompleto boolean,
+    dt_ultima_compra date,
+    vl_ticket_medio numeric(10,2),
+    vl_ticket_ult_compra numeric(10,2),
+    cnpj_loja_freq character varying(14) COLLATE pg_catalog."default" NOT NULL,
+    cnpj_loja_ultima character varying(14) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT "Mercado_pkey" PRIMARY KEY (cpf_cnpj_comprador)
+)
+
+```
 
 ### Comandos para instalação dos bibliotecas da aplicação
 
-- Executar o arquivo "install.sh"
+```
+Executar o arquivo "install.sh"
+
+```
+
+### Comandos para excecutar a aplicação
+
+```
+cd ../src/github.com/jeansferreira/
+go run main.go
+
+```
