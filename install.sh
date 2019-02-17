@@ -1,5 +1,8 @@
 #!/bin/bash
 
+sudo apt install golang-go
+sudo apt install gccgo-go 
+
 go get github.com/jmoiron/sqlx
 go get github.com/lib/pq
 go get github.com/acroca
