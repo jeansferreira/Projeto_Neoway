@@ -28,8 +28,7 @@ Você será avaliado por:
 
 ## Arquivos de entrada
 - Arquivos de entrada em CSV ou TXT devem ficar na pasta ./Dados
-- O sistema lê arquivo por arquivo e insere na base de dados.
-- Foi incluido o CPF como chave primária
+- A aplicação obtem os arquivos que estão na pasta definida e lê um de cada vêz e insere na base de dados.
 
 ## Tratamento realizado
 - Todos os tratamentos solicitados estão no pacote "src/tratamento"
@@ -39,15 +38,13 @@ Você será avaliado por:
 
 - Caso a conexão do banco de dados não seja a mesma, favor alterar a classe "/src/repo/conexao.go".
 
-/*
-const (
-    host     = "localhost"
-    port     = 5432
-    user     = "postgres"
-    password = "Postgres2019!"
-    dbname   = "neoway"
-)
-*/
+-const (
+-    host     = "localhost"
+-    port     = 5432
+-    user     = "postgres"
+-    password = "Postgres2019!"
+-    dbname   = "neoway"
+-)
 
 ### Comando para instalação do Docker e do Postgres/Pgdmin4 
 
@@ -65,18 +62,18 @@ const (
 ### Script dá tabela.
 - Obs.: O script é criado automáticamente pela aplicação, sendo que não necessário executar em base de dados. 
 
-CREATE TABLE IF NOT EXISTS public."Mercado"
-(
-    cpf_cnpj_comprador character varying(14) COLLATE pg_catalog."default" NOT NULL,
-    flg_private boolean,
-    flg_incompleto boolean,
-    dt_ultima_compra date,
-    vl_ticket_medio numeric(10,2),
-    vl_ticket_ult_compra numeric(10,2),
-    cnpj_loja_freq character varying(14) COLLATE pg_catalog."default" NOT NULL,
-    cnpj_loja_ultima character varying(14) COLLATE pg_catalog."default" NOT NULL,
-    CONSTRAINT "Mercado_pkey" PRIMARY KEY (cpf_cnpj_comprador)
-)
+-CREATE TABLE IF NOT EXISTS public."Mercado"
+-(
+-    cpf_cnpj_comprador character varying(14) COLLATE pg_catalog."default" NOT NULL,
+-    flg_private boolean,
+-    flg_incompleto boolean,
+-    dt_ultima_compra date,
+-    vl_ticket_medio numeric(10,2),
+-    vl_ticket_ult_compra numeric(10,2),
+-    cnpj_loja_freq character varying(14) COLLATE pg_catalog."default" NOT NULL,
+-    cnpj_loja_ultima character varying(14) COLLATE pg_catalog."default" NOT NULL,
+-    CONSTRAINT "Mercado_pkey" PRIMARY KEY (cpf_cnpj_comprador)
+-)
 
 ### Comandos para instalação dos bibliotecas da aplicação
 
