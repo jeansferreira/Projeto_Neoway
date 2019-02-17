@@ -7,12 +7,12 @@ import (
 //Compra representa informações da compra
 type Compra struct {
     Cpf_cnpj_comprador 		string `json:"cpf_cnpj_comprador"`
-    Flg_private 			string `json:"flg_private"`
-    Flg_incompleto 			string `json:"flg_incompleto"`
+    Flg_private 		string `json:"flg_private"`
+    Flg_incompleto 		string `json:"flg_incompleto"`
     Dt_ultima_compra 		string `json:"dt_ultima_compra"`
     Vl_ticket_medio 		string `json:"vl_ticket_medio"`
     Vl_ticket_ult_compra 	string `json:"vl_ticket_ult_compra"`
-    Cnpj_loja_freq 			string `json:"cnpj_loja_freq"`
+    Cnpj_loja_freq 		string `json:"cnpj_loja_freq"`
     Cnpj_loja_ultima 		string `json:"cnpj_loja_ultima"`
 }
 
