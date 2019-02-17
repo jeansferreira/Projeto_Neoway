@@ -65,7 +65,7 @@ docker run --name teste-pgadmin --network=postgres-network -p 15432:80 -e "PGADM
 
 ```
 
-### Script dá tabela.
+### Script de Create da Table (Migracao).
 - Obs.: O script é criado automáticamente pela aplicação, sendo que não necessário executar em base de dados. 
 
 ```
