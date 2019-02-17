@@ -85,7 +85,10 @@ CREATE TABLE IF NOT EXISTS public."Mercado"
 
 ```
 
-![Screenshot](Tela Banco de Dados.png)
+<p align="center">
+  <img src="Tela Banco de Dados.png" width="350" title="hover text">
+  <img src="Tela Banco de Dados.png" width="350" alt="accessibility text">
+</p>
 
 ### Comandos para instalação dos bibliotecas da aplicação
 
