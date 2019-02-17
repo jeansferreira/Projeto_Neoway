@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS public."Mercado"
 
 ```
 
-![Screenshot](screenshot.png)
+![Screenshot](Tela Banco de Dados.png)
 
 ### Comandos para instalação dos bibliotecas da aplicação
 
