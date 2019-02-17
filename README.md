@@ -38,26 +38,32 @@ Você será avaliado por:
 
 - Caso a conexão do banco de dados não seja a mesma, favor alterar a classe "/src/repo/conexao.go".
 
--const (
--    host     = "localhost"
--    port     = 5432
--    user     = "postgres"
--    password = "Postgres2019!"
--    dbname   = "neoway"
--)
+```
+const (
+    host     = "localhost"
+    port     = 5432
+    user     = "postgres"
+    password = "Postgres2019!"
+    dbname   = "neoway"
+)
+
+```
 
 ### Comando para instalação do Docker e do Postgres/Pgdmin4 
 
-- sudo apt-get install docker.io
-- docker pull postgres
-- sudo docker pull postgres
-- docker pull dpage/pgadmin4
-- sudo docker pull dpage/pgadmin4
-- sudo docker network create --driver bridge postgres-network
-- sudo docker network ls
-- docker run --name teste-postgres --network=postgres-network -e "POSTGRES_PASSWORD=Postgres2019!" -p 5432:5432 -v /home/jean/Desenvolvimento/PostgreSQL:/var/lib/postgresql/data -d postgres
-- sudo docker run --name teste-postgres --network=postgres-network -e "POSTGRES_PASSWORD=Postgres2019!" -p 5432:5432 -v /home/jean/Desenvolvimento/PostgreSQL:/var/lib/postgresql/data -d postgres
-- docker run --name teste-pgadmin --network=postgres-network -p 15432:80 -e "PGADMIN_DEFAULT_EMAIL=jeansferreira@gmail.com" -e "PGADMIN_DEFAULT_PASSWORD=PgAdmin2019!" -d dpage/pgadmin4
+```
+sudo apt-get install docker.io
+docker pull postgres
+sudo docker pull postgres
+docker pull dpage/pgadmin4
+sudo docker pull dpage/pgadmin4
+sudo docker network create --driver bridge postgres-network
+sudo docker network ls
+docker run --name teste-postgres --network=postgres-network -e "POSTGRES_PASSWORD=Postgres2019!" -p 5432:5432 -v /home/jean/Desenvolvimento/PostgreSQL:/var/lib/postgresql/data -d postgres
+sudo docker run --name teste-postgres --network=postgres-network -e "POSTGRES_PASSWORD=Postgres2019!" -p 5432:5432 -v /home/jean/Desenvolvimento/PostgreSQL:/var/lib/postgresql/data -d postgres
+docker run --name teste-pgadmin --network=postgres-network -p 15432:80 -e "PGADMIN_DEFAULT_EMAIL=jeansferreira@gmail.com" -e "PGADMIN_DEFAULT_PASSWORD=PgAdmin2019!" -d dpage/pgadmin4
+
+```
 
 ### Script dá tabela.
 - Obs.: O script é criado automáticamente pela aplicação, sendo que não necessário executar em base de dados. 
