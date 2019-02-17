@@ -36,6 +36,19 @@ Você será avaliado por:
 
 ## Base de Dados
 - Foi utilizado um docker do Postgres para o Projeto
+
+- Caso a conexão do banco de dados não seja a mesma, favor alterar a classe "/src/repo/conexao.go".
+
+/*
+const (
+    host     = "localhost"
+    port     = 5432
+    user     = "postgres"
+    password = "Postgres2019!"
+    dbname   = "neoway"
+)
+*/
+
 ### Comando para instalação do Docker e do Postgres/Pgdmin4 
 
 - sudo apt-get install docker.io
