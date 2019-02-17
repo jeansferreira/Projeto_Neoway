@@ -27,14 +27,14 @@ Você será avaliado por:
 - Cobertura de todos os requisitos obrigatórios.
 
 ## Arquivos de entrada
-- Arquivos de entrada em CSV ou TXT devem ficar na pasta ./Dados
+- Os arquivos de entrada em CSV ou TXT devem ficar na pasta "./Dados"
 - A aplicação obtem os arquivos que estão na pasta definida e lê um de cada vêz e insere na base de dados.
 
 ## Tratamento realizado
-- Todos os tratamentos solicitados estão no pacote "src/tratamento"
+- Todos os tratamentos solicitados estão no pacote "src/tratamento".
 
 ## Base de Dados
-- Foi utilizado um docker do Postgres para o Projeto
+- Foi utilizado um docker do Postgres/PgAdmin4 para o desenvolvimento do Projeto.
 
 - Caso a conexão do banco de dados não seja a mesma, favor alterar a classe "/src/repo/conexao.go".
 
