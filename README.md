@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS public."Mercado"
 
 ```
 
-(http://lmsotfy.com/so.png)
+![Screenshot](screenshot.png)
 
 ### Comandos para instalação dos bibliotecas da aplicação
 
