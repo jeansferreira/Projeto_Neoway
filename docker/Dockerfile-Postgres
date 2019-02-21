@@ -6,7 +6,7 @@ WORKDIR /home
 
 RUN \
        apk add --no-cache bash git openssh && \
-       go get -u github.com/jeansferreira/teste_neoway 
+       go get -u go get github.com/lib/pq 
        
 
 CMD ["go","run","main.go"]
