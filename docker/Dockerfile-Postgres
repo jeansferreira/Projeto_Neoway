@@ -1,12 +1,20 @@
-FROM golang:1.7-alpine
+FROM golang:cross
 
-ADD . /home
-        
-WORKDIR /home
+# The golang Docker sets the $GOPATH to be /go
+# https://github.com/docker-library/golang/blob/c1baf037d71331eb0b8d4c70cff4c29cf124c5e0/1.4/Dockerfile
+RUN mkdir -p /go/src/github.com/jeansferreira/Projeto_Neoway
+WORKDIR /go/src/github.com/jeansferreira/Projeto_Neoway
 
-RUN \
-       apk add --no-cache bash git openssh && \
-       go get -u go get github.com/lib/pq 
-       
+RUN apk add --no-cache \
+ bash \
+ build-base \
+ curl \
+ git \
+ libffi-dev \
+ openssh \
+ openssl-dev \
+ python \
+ py-pip \
+ python-dev
 
 CMD ["go","run","main.go"]
